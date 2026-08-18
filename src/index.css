@@ -1,0 +1,66 @@
+:root {
+  --color-canvas: #030308;
+  --color-bg-top: #0a0b1e;
+  --color-bg-bottom: #141233;
+  --color-white: #ffffff;
+  --color-text-muted: #9ca3af;
+  --color-text-faint: #6b7280;
+  --color-accent: #86f3d3;
+  --color-accent-glow: rgba(134, 243, 211, 0.31);
+  --color-accent-wash: rgba(134, 243, 211, 0.06);
+  --color-accent-wash-strong: rgba(134, 243, 211, 0.13);
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-strong: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-portal-glow: #7c66ff;
+
+  --font-display: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  --radius-screen: 48px;
+  --radius-card: 20px;
+  --radius-pill: 100px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  font-family: var(--font-body);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+}

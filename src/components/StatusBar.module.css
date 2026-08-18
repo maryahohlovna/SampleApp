@@ -1,0 +1,22 @@
+.bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.time {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-white);
+}

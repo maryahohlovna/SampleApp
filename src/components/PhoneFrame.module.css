@@ -1,0 +1,21 @@
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 402px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, var(--color-bg-top), var(--color-bg-bottom));
+}
+
+@media (min-width: 460px) {
+  .frame {
+    min-height: 874px;
+    margin: 40px auto;
+    border-radius: var(--radius-screen);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  }
+}

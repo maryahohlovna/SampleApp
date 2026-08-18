@@ -1,0 +1,100 @@
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  flex: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titleBlock {
+  padding: 0 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  color: var(--color-white);
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 24px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cardSelected {
+  background: var(--color-accent-wash);
+  border-color: var(--color-accent-glow);
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--color-surface-strong);
+  color: var(--color-white);
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.iconWrapSelected {
+  background: rgba(134, 243, 211, 0.08);
+  color: var(--color-accent);
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-white);
+}
+
+.cardTitleSelected {
+  color: var(--color-accent);
+}
+
+.cardDescription {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--color-text-muted);
+}
+
+.cardDescriptionSelected {
+  color: var(--color-white);
+}

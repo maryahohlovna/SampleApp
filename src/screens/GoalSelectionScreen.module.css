@@ -1,0 +1,118 @@
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  flex: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-text-muted);
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 24px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 20px;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cardSelected {
+  background: var(--color-accent-wash);
+  border-color: var(--color-accent-glow);
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: var(--color-surface-strong);
+  color: var(--color-white);
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.iconWrapSelected {
+  background: var(--color-accent-wash-strong);
+  color: var(--color-accent);
+}
+
+.cardLabel {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.cardLabelSelected {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--color-text-faint);
+  background: transparent;
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.checkboxSelected {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #080714;
+}
