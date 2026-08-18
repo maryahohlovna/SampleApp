@@ -1,4 +1,4 @@
-import { Wind, Moon, Target, Compass, Heart, CircleX, Flower2, Flower } from 'lucide-react';
+import { Wind, Moon, Target, Compass, Heart, Zap, CircleX, Flower2, Flower } from 'lucide-react';
 import type { Goal, ExperienceLevel, TimeSlot } from '../types';
 
 export const GOALS: Goal[] = [
@@ -7,6 +7,7 @@ export const GOALS: Goal[] = [
   { id: 'focus', label: 'Deepen Mental Focus', icon: Target },
   { id: 'self-discovery', label: 'Self-Discovery & Reflection', icon: Compass },
   { id: 'resilience', label: 'Emotional Resilience', icon: Heart },
+  { id: 'energy', label: 'Improve Energy Levels', icon: Zap },
 ];
 
 export const EXPERIENCE_LEVELS: ExperienceLevel[] = [
