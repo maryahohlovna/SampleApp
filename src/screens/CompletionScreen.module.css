@@ -5,72 +5,75 @@
   justify-content: space-between;
   min-height: 100%;
   flex: 1;
+  background: var(--color-bg);
 }
 
-.hero {
-  position: relative;
-  z-index: 1;
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 32px;
-  padding: 60px 24px 0;
-  flex: 1;
+  gap: 16px;
+  padding: 40px 24px 8px;
   text-align: center;
 }
 
-.portalSmall {
-  transform: scale(0.6);
-  margin: -56px 0;
-}
-
-.textBlock {
+.sparkleBadge {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--color-accent-soft-bg);
+  color: var(--color-accent);
 }
 
-.title {
+.headline {
   font-family: var(--font-display);
+  font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  letter-spacing: -0.5px;
-  color: var(--color-white);
-}
-
-.subtitle {
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 22px;
-  color: var(--color-text-muted);
+  font-size: 40px;
+  line-height: 1.15;
+  color: var(--color-text);
+  width: 100%;
 }
 
 .summary {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  width: 100%;
+}
+
+.visualWrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  padding: 20px;
-  border-radius: var(--radius-card);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  text-align: left;
+  align-items: center;
+  padding: 0 24px;
 }
 
-.summaryRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 14px;
+.serenePortal {
+  width: 240px;
+  height: 240px;
+  border-radius: 40px;
+  background:
+    conic-gradient(from 90deg at 50% 50%, #cdb8e8 0deg, #a9c7b3 90deg, #e6dcc8 180deg, #c9b8dd 270deg, #cdb8e8 360deg);
+  filter: blur(1px);
+  position: relative;
 }
 
-.summaryLabel {
-  color: var(--color-text-faint);
-}
-
-.summaryValue {
-  color: var(--color-accent);
-  font-weight: 600;
-  text-align: right;
+.serenePortal::after {
+  content: '';
+  position: absolute;
+  inset: 34%;
+  border-radius: 50%;
+  background: var(--color-bg);
 }

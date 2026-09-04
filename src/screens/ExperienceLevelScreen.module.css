@@ -5,96 +5,81 @@
   justify-content: space-between;
   min-height: 100%;
   flex: 1;
+  background: var(--color-bg);
 }
 
 .content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.titleBlock {
-  padding: 0 24px;
-}
-
-.title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 32px;
-  letter-spacing: -0.5px;
-  color: var(--color-white);
-}
-
-.cardList {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding: 0 24px;
 }
 
 .card {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 8px;
   padding: 20px;
-  border-radius: 24px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  box-shadow: 0 8px 12px rgba(74, 84, 78, 0.03);
   text-align: left;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .cardSelected {
-  background: var(--color-accent-wash);
-  border-color: var(--color-accent-glow);
+  background: var(--color-accent-soft-bg);
+  border-color: var(--color-accent);
 }
 
-.iconWrap {
+.cardHeader {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 28px;
-  background: var(--color-surface-strong);
-  color: var(--color-white);
-  flex-shrink: 0;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.iconWrapSelected {
-  background: rgba(134, 243, 211, 0.08);
-  color: var(--color-accent);
-}
-
-.textBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .cardTitle {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 18px;
-  color: var(--color-white);
-}
-
-.cardTitleSelected {
-  color: var(--color-accent);
+  font-size: 16px;
+  color: var(--color-text);
 }
 
 .cardDescription {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 1.4;
   color: var(--color-text-muted);
 }
 
-.cardDescriptionSelected {
-  color: var(--color-white);
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+}
+
+.radioSelected {
+  border-color: var(--color-accent);
+}
+
+.radioDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--color-accent);
 }

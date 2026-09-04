@@ -1,41 +1,35 @@
-import { Wind, Moon, Target, Compass, Heart, Zap, CircleX, Flower2, Flower } from 'lucide-react';
-import type { Goal, ExperienceLevel, TimeSlot } from '../types';
+import { Waves, MoonStar, Flower, Sprout } from 'lucide-react';
+import type { Goal, ExperienceLevel, Duration } from '../types';
 
 export const GOALS: Goal[] = [
-  { id: 'stress', label: 'Reduce Stress & Anxiety', icon: Wind },
-  { id: 'sleep', label: 'Improve Sleep Quality', icon: Moon },
-  { id: 'focus', label: 'Deepen Mental Focus', icon: Target },
-  { id: 'self-discovery', label: 'Self-Discovery & Reflection', icon: Compass },
-  { id: 'resilience', label: 'Emotional Resilience', icon: Heart },
-  { id: 'energy', label: 'Improve Energy Levels', icon: Zap },
+  { id: 'stress', label: 'Reduce stress', icon: Waves },
+  { id: 'sleep', label: 'Better sleep', icon: MoonStar },
+  { id: 'focus', label: 'Improve focus', icon: Flower },
+  { id: 'habit', label: 'Build a habit', icon: Sprout },
 ];
 
 export const EXPERIENCE_LEVELS: ExperienceLevel[] = [
   {
     id: 'new',
-    title: 'New to this',
-    description:
-      'I am ready to discover meditation. Perfect for building a simple, guided foundational practice.',
-    icon: CircleX,
+    title: "I'm new to meditation",
+    description: "Perfect place to start. We'll guide you step by step.",
   },
   {
-    id: 'some',
-    title: 'Some experience',
-    description: 'I know the basics and practice occasionally. Help me deepen my mindfulness routine.',
-    icon: Flower2,
+    id: 'tried',
+    title: "I've tried it a few times",
+    description: "You know the basics. We'll help you deepen your practice.",
   },
   {
     id: 'regular',
-    title: 'Regular practice',
-    description:
-      "Mindfulness is already part of my life. I'm looking for advanced silent and unguided sessions.",
-    icon: Flower,
+    title: 'I practice regularly',
+    description: 'Advanced sessions and unguided timers to suit your routine.',
   },
 ];
 
-export const TIME_SLOTS: TimeSlot[] = [
-  { id: 'morning', label: 'Morning', display: '7:30 AM', hour: 7, minute: 30, meridiem: 'AM' },
-  { id: 'midday', label: 'Midday', display: '1:00 PM', hour: 1, minute: 0, meridiem: 'PM' },
-  { id: 'evening', label: 'Evening', display: '6:30 PM', hour: 6, minute: 30, meridiem: 'PM' },
-  { id: 'before-bed', label: 'Before Bed', display: '9:45 PM', hour: 9, minute: 45, meridiem: 'PM' },
+export const DURATIONS: Duration[] = [
+  { id: '5', label: '5 min' },
+  { id: '10', label: '10 min' },
+  { id: '15', label: '15 min' },
+  { id: '20', label: '20 min' },
+  { id: '30', label: '30 min' },
 ];

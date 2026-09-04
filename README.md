@@ -1,24 +1,25 @@
-# Stillpoint — Onboarding Flow
+# Stillness — Onboarding Flow
 
-A four-screen mobile onboarding flow for "Stillpoint," a meditation app, implemented from a
+A five-screen mobile onboarding flow for "Stillness," a meditation app, implemented from a
 Figma design (React + TypeScript + Vite, plain CSS Modules).
 
 ## Screens
 
 1. **Welcome** — app intro with a "Get Started" CTA.
-2. **Goal selection** — multi-select cards for what the user wants to focus on.
-3. **Experience level** — single-select cards for meditation familiarity.
-4. **Daily reminder** — time-slot picker and a notification toggle, ending in a summary screen.
+2. **Goals** — a 2x2 grid of multi-select cards for what brings the user to the app.
+3. **Experience** — single-select cards for meditation familiarity.
+4. **Time preference** — a horizontal pill carousel for how much time the user can spend.
+5. **All set** — a completion screen that starts the app.
 
-State (selected goals, experience level, reminder time, notifications) lives in `App.tsx` and
-flows down through each screen; back/close navigation and per-step validation (e.g. "Continue"
-is disabled until a selection is made) are all wired up.
+State (selected goals, experience level, session duration) lives in `App.tsx` and flows down
+through each screen; back navigation and per-step validation (e.g. "Continue" is disabled
+until a selection is made) are wired up.
 
-Icons come from [lucide-react](https://lucide.dev) (the Figma layer names — `wind`, `moon`,
-`target`, `compass`, `heart`, `bell`, `flower`, etc. — map 1:1 to Lucide icons). The decorative
-ambient-glow blobs and the meditation-portal hero graphic are recreated with CSS gradients rather
-than exported image assets, since this environment's network policy blocks direct fetches from
-figma.com.
+Icons come from [lucide-react](https://lucide.dev) (the Figma layer names — `waves`,
+`moon-star`, `flower`, `sprout`, `sparkles`, etc. — map 1:1 to Lucide icons). The welcome
+screen's background and the zen-stones/serene-portal illustrations are recreated with CSS
+gradients rather than exported image assets, since this environment's network policy blocks
+direct fetches from figma.com.
 
 ## Development
 

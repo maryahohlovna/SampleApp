@@ -1,0 +1,65 @@
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  flex: 1;
+  background: var(--color-bg);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.carousel {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 0 24px;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  flex-shrink: 0;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-text);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pillSelected {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.illustrationWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.zenStones {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background:
+    radial-gradient(circle at 50% 22%, #b9c9a8 0%, #b9c9a8 10%, transparent 11%),
+    radial-gradient(ellipse 42% 16% at 50% 38%, #cfc2a6 0%, #cfc2a6 95%, transparent 100%),
+    radial-gradient(ellipse 48% 18% at 50% 56%, #d9cdb4 0%, #d9cdb4 95%, transparent 100%),
+    radial-gradient(ellipse 56% 20% at 50% 76%, #e4dac4 0%, #e4dac4 95%, transparent 100%),
+    linear-gradient(160deg, #efe8d8 0%, #e6dcc8 100%);
+}

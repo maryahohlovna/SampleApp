@@ -1,27 +1,23 @@
 :root {
-  --color-canvas: #030308;
-  --color-bg-top: #0a0b1e;
-  --color-bg-bottom: #141233;
+  --color-bg: #faf8f5;
+  --color-bg-inset: #f3efea;
   --color-white: #ffffff;
-  --color-text-muted: #9ca3af;
-  --color-text-faint: #6b7280;
-  --color-accent: #86f3d3;
-  --color-accent-glow: rgba(134, 243, 211, 0.31);
-  --color-accent-wash: rgba(134, 243, 211, 0.06);
-  --color-accent-wash-strong: rgba(134, 243, 211, 0.13);
-  --color-surface: rgba(255, 255, 255, 0.04);
-  --color-surface-strong: rgba(255, 255, 255, 0.08);
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-portal-glow: #7c66ff;
+  --color-border: #ece7e2;
+  --color-text: #2a3830;
+  --color-text-muted: #5a6a60;
+  --color-primary: #5f7d6b;
+  --color-primary-soft-bg: #e8efe9;
+  --color-accent: #70649a;
+  --color-accent-soft-bg: #f1edf8;
 
-  --font-display: 'Outfit', 'Segoe UI', system-ui, sans-serif;
-  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Instrument Serif', 'Georgia', serif;
+  --font-body: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
 
   --radius-screen: 48px;
-  --radius-card: 20px;
+  --radius-card: 24px;
   --radius-pill: 100px;
 
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -36,9 +32,9 @@ body,
 
 body {
   margin: 0;
-  background: var(--color-canvas);
+  background: var(--color-bg);
   font-family: var(--font-body);
-  color: var(--color-white);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
 }
 

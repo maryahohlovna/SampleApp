@@ -3,15 +3,14 @@ import PhoneFrame from './components/PhoneFrame';
 import WelcomeScreen from './screens/WelcomeScreen';
 import GoalSelectionScreen from './screens/GoalSelectionScreen';
 import ExperienceLevelScreen from './screens/ExperienceLevelScreen';
-import DailyReminderScreen from './screens/DailyReminderScreen';
+import TimePreferenceScreen from './screens/TimePreferenceScreen';
 import CompletionScreen from './screens/CompletionScreen';
 import type { OnboardingData, Step } from './types';
 
 const INITIAL_DATA: OnboardingData = {
   goalIds: [],
   levelId: null,
-  timeSlotId: 'morning',
-  notificationsEnabled: true,
+  durationId: '10',
 };
 
 export default function App() {
@@ -41,7 +40,6 @@ export default function App() {
           selectedGoalIds={data.goalIds}
           onToggleGoal={toggleGoal}
           onBack={() => setStep('welcome')}
-          onClose={restart}
           onContinue={() => setStep('level')}
         />
       )}
@@ -51,26 +49,20 @@ export default function App() {
           selectedLevelId={data.levelId}
           onSelectLevel={(levelId) => setData((prev) => ({ ...prev, levelId }))}
           onBack={() => setStep('goals')}
-          onClose={restart}
-          onContinue={() => setStep('reminder')}
+          onContinue={() => setStep('time')}
         />
       )}
 
-      {step === 'reminder' && (
-        <DailyReminderScreen
-          selectedSlotId={data.timeSlotId}
-          onSelectSlot={(timeSlotId) => setData((prev) => ({ ...prev, timeSlotId }))}
-          notificationsEnabled={data.notificationsEnabled}
-          onToggleNotifications={(notificationsEnabled) =>
-            setData((prev) => ({ ...prev, notificationsEnabled }))
-          }
+      {step === 'time' && (
+        <TimePreferenceScreen
+          selectedDurationId={data.durationId}
+          onSelectDuration={(durationId) => setData((prev) => ({ ...prev, durationId }))}
           onBack={() => setStep('level')}
-          onClose={restart}
-          onFinish={() => setStep('complete')}
+          onContinue={() => setStep('complete')}
         />
       )}
 
-      {step === 'complete' && <CompletionScreen data={data} onRestart={restart} />}
+      {step === 'complete' && <CompletionScreen onRestart={restart} />}
     </PhoneFrame>
   );
 }

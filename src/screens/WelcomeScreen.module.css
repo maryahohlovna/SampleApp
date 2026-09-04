@@ -7,52 +7,41 @@
   flex: 1;
 }
 
-.hero {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  flex: 1;
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(60% 45% at 30% 20%, rgba(134, 176, 152, 0.5), transparent 70%),
+    radial-gradient(55% 40% at 75% 35%, rgba(200, 214, 190, 0.55), transparent 70%),
+    radial-gradient(70% 55% at 40% 75%, rgba(154, 189, 168, 0.45), transparent 70%),
+    linear-gradient(160deg, #eef1e8 0%, #dfe6da 45%, #cdd9cd 100%);
 }
 
-.branding {
+.brandCenter {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 0 40px;
+  padding: 0 32px;
   text-align: center;
-}
-
-.kicker {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  width: 100%;
 }
 
 .appName {
   font-family: var(--font-display);
+  font-style: normal;
   font-weight: 400;
-  font-size: 44px;
-  letter-spacing: -1px;
-  color: var(--color-white);
+  font-size: 64px;
+  color: var(--color-text);
   width: 100%;
 }
 
 .tagline {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 26px;
   color: var(--color-text-muted);
   width: 100%;
 }

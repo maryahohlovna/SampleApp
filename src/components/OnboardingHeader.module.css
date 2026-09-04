@@ -3,7 +3,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   padding: 12px 24px 0;
   flex-shrink: 0;
 }
@@ -14,40 +14,52 @@
   justify-content: space-between;
 }
 
-.iconButton {
+.backButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.spacer {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 .step {
   font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--color-text-faint);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text-muted);
 }
 
-.progress {
-  display: flex;
-  gap: 6px;
-  height: 2px;
+.progressBg {
+  height: 4px;
   width: 100%;
-}
-
-.segment {
-  flex: 1;
-  height: 100%;
-  min-width: 1px;
   border-radius: 2px;
-  background: var(--color-border);
-  transition: background 0.3s ease;
+  background: var(--color-bg-inset);
+  overflow: hidden;
 }
 
-.segmentFilled {
-  background: var(--color-accent);
+.progressFill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--color-text);
 }

@@ -12,11 +12,12 @@
 .time {
   font-weight: 600;
   font-size: 14px;
+  color: var(--color-text);
 }
 
 .icons {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--color-white);
+  color: var(--color-text);
 }

@@ -1,35 +1,31 @@
-import { ChevronLeft, X } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import styles from './OnboardingHeader.module.css';
 
 interface OnboardingHeaderProps {
   step: number;
   totalSteps: number;
+  headline: string;
   onBack: () => void;
-  onClose: () => void;
 }
 
-export default function OnboardingHeader({ step, totalSteps, onBack, onClose }: OnboardingHeaderProps) {
+export default function OnboardingHeader({ step, totalSteps, headline, onBack }: OnboardingHeaderProps) {
+  const progress = (step / totalSteps) * 100;
+
   return (
     <div className={styles.header}>
       <div className={styles.row}>
-        <button className={styles.iconButton} onClick={onBack} aria-label="Go back">
-          <ChevronLeft size={20} />
+        <button className={styles.backButton} onClick={onBack} aria-label="Go back">
+          <ChevronLeft size={18} />
         </button>
         <p className={styles.step}>
           Step {step} of {totalSteps}
         </p>
-        <button className={styles.iconButton} onClick={onClose} aria-label="Close onboarding">
-          <X size={20} />
-        </button>
+        <div className={styles.spacer} aria-hidden="true" />
       </div>
-      <div className={styles.progress}>
-        {Array.from({ length: totalSteps }, (_, i) => (
-          <div
-            key={i}
-            className={`${styles.segment} ${i < step ? styles.segmentFilled : ''}`}
-          />
-        ))}
+      <div className={styles.progressBg}>
+        <div className={styles.progressFill} style={{ width: `${progress}%` }} />
       </div>
+      <p className={styles.headline}>{headline}</p>
     </div>
   );
 }
